@@ -1,0 +1,163 @@
+@import './variables.css';
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body,#root { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--neutral);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Layout container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  padding: 18px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 28px;
+  margin-bottom: 22px;
+}
+.hero-inner {
+  display:flex;
+  gap: 18px;
+  align-items: center;
+}
+.hero-photo{
+  width:108px;
+  height:108px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid rgba(30,64,175,0.08);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+.hero h1{
+  font-size: 1.5rem;
+  font-weight:700;
+  color: var(--text);
+}
+.role {
+  color: rgba(17,24,39,0.75);
+  font-weight: 500;
+  margin-top:6px;
+}
+.oab {
+  color: rgba(17,24,39,0.5);
+  font-size: 0.9rem;
+  margin-top:6px;
+}
+
+/* CTA */
+.cta-row { display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; }
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  background: var(--primary);
+  color:#fff;
+  border-radius: 10px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.95rem;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(17,24,39,0.06);
+}
+.btn:active { transform: translateY(1px); }
+
+/* Practice areas grid */
+.areas {
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  gap:12px;
+  margin: 12px 0 22px;
+}
+.area-card {
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:16px;
+  border-radius:10px;
+  background: linear-gradient(180deg, rgba(30,64,175,0.03), rgba(255,255,255,0));
+  border: 1px solid rgba(17,24,39,0.03);
+}
+.area-icon { font-size:1.3rem; padding-top:2px; }
+.area-title { font-weight:600; font-size:1rem; color:var(--text); }
+.area-desc { font-size:0.95rem; color: rgba(17,24,39,0.65); margin-top:6px; }
+
+/* About */
+.about { display:flex; gap:18px; align-items:flex-start; margin-bottom:18px; }
+.bio { max-width: 60ch; color: rgba(17,24,39,0.85); }
+
+/* Contact Buttons (socials) */
+.socials { display:flex; gap:10px; flex-wrap:wrap; }
+.social-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(17,24,39,0.04);
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+}
+
+/* Footer */
+footer.site-footer {
+  margin-top: 36px;
+  padding: 18px;
+  text-align:center;
+  color: rgba(17,24,39,0.6);
+  font-size:0.9rem;
+}
+
+/* Sticky WhatsApp floating button */
+.whatsapp-fab{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,var(--primary), #153b9a);
+  color:white;
+  box-shadow: 0 10px 30px rgba(30,64,175,0.18);
+  text-decoration: none;
+  font-weight:700;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-inner { gap: 24px; }
+  .areas { grid-template-columns: repeat(3, 1fr); }
+  .about { gap: 28px; }
+  .hidden-mobile { display: inline; }
+}

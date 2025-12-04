@@ -1,0 +1,11 @@
+:root{
+  --primary: #1e40af;    
+  --secondary: #fef3c7;  
+  --accent: #dc2626;     
+  --neutral: #f9fafb;
+  --text: #111827;
+  --max-width: 1100px;
+  --radius: 12px;
+}
+
+.hidden-mobile { display: none; }
