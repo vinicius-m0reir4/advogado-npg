@@ -4,6 +4,8 @@ import PracticeAreas from '../components/PracticeAreas';
 import About from '../components/About';
 import ContactButtons from '../components/ContactButtons';
 import Footer from '../components/Footer';
+import HowWeWork from '../components/HowWeWork';
+
 
 export default function Home() {
   return (
@@ -11,6 +13,7 @@ export default function Home() {
       <Hero />
       <PracticeAreas />
       <About />
+      <HowWeWork />
       <ContactButtons />
       <Footer />
     </main>

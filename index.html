@@ -1,16 +1,141 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+    <!-- Metadados Básicos -->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO para Advogado -->
+    <title>Dra. Vitória Queiroz - Advogada Trabalhista e Cível | OAB/UF 12345</title>
+    <meta name="description" content="Advogada especializada em Direito Trabalhista e Cível. Atendimento personalizado com foco em resultados. Consultoria jurídica online e presencial.">
+    <meta name="keywords" content="advogada trabalhista, direito cível, advogado São Paulo, consultoria jurídica, OAB, processo trabalhista, direito civil">
+    <meta name="author" content="Vitória Queiroz">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vitoriaqueirozadv.com.br/">
+    <meta property="og:title" content="Dra. Vitória Queiroz - Advogada Trabalhista e Cível">
+    <meta property="og:description" content="Advogada especializada em Direito Trabalhista e Cível. Atendimento personalizado com foco em resultados.">
+    <meta property="og:image" content="https://www.vitoriaqueirozadv.com.br/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.vitoriaqueirozadv.com.br/">
+    <meta property="twitter:title" content="Dra. Vitória Queiroz - Advogada Trabalhista e Cível">
+    <meta property="twitter:description" content="Advogada especializada em Direito Trabalhista e Cível. Atendimento personalizado com foco em resultados.">
+    <meta property="twitter:image" content="https://www.vitoriaqueirozadv.com.br/twitter-image.jpg">
+    
+    <!-- Fonte Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> 
-     <title>advogado-npg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS de Performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Ícones -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Structured Data para Advogado (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Dra. Vitória Queiroz - Advogada",
+      "image": "https://www.vitoriaqueirozadv.com.br/profile-hero.jpg",
+      "@id": "https://www.vitoriaqueirozadv.com.br",
+      "url": "https://www.vitoriaqueirozadv.com.br",
+      "telephone": "+5511999999999",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 1000",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01310-100",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.563987,
+        "longitude": -46.653123
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "sameAs": [
+        "https://www.instagram.com/vitoriaqueirozadv",
+        "https://www.linkedin.com/in/vitoriaqueiroz",
+        "https://api.whatsapp.com/send?phone=5511999999999"
+      ]
+    }
+    </script>
+    
+    <!-- Meta para WhatsApp Business -->
+    <meta property="business:contact_data:phone_number" content="+5511999999999">
+    <meta property="business:contact_data:email" content="contato@vitoriaqueiroz.com.br">
+    <meta property="business:contact_data:country" content="BR">
+    <meta property="business:contact_data:region" content="SP">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.vitoriaqueirozadv.com.br">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Cores do Tema -->
+    <meta name="theme-color" content="#1a56db">
+    <meta name="msapplication-TileColor" content="#1a56db">
+    
+    <!-- Preconnect para otimização -->
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
   </head>
+  
   <body>
     <div id="root"></div>
+    
+    <!-- Scripts otimizados -->
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Google Analytics (opcional) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Pixel do Facebook (opcional) -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'FB_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
   </body>
 </html>

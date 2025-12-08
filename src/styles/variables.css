@@ -1,11 +1,29 @@
-:root{
-  --primary: #1e40af;    
-  --secondary: #fef3c7;  
-  --accent: #dc2626;     
-  --neutral: #f9fafb;
-  --text: #111827;
-  --max-width: 1100px;
+:root {
+  /* Cores Premium */
+  --primary: #1a56db;           /* Azul forte e profissional */
+  --primary-dark: #1547b0;      /* Azul escuro para hover */
+  --primary-light: #3b82f6;     /* Azul claro para gradientes */
+  --secondary: #6b7280;         /* Cinza para textos secundários */
+  --accent: #f59e0b;            /* Dourado para destaques */
+  --accent-light: #fbbf24;      /* Dourado claro */
+  --neutral: #f8fafc;           /* Fundo muito claro */
+  --card-bg: #ffffff;           /* Fundo de cards */
+  --text: #111827;              /* Texto principal */
+  --text-light: #6b7280;        /* Texto secundário */
+  --border: #e5e7eb;           /* Bordas sutis */
+  
+  /* Efeitos */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1);
+  --shadow-xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+  
+  /* Layout */
+  --max-width: 1200px;
   --radius: 12px;
+  --radius-lg: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hidden-mobile { display: none; }
