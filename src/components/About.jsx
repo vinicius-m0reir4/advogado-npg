@@ -92,7 +92,7 @@ export default function About() {
                 <div className="timeline-year">Credenciamento Profissional</div>
                 <div className="timeline-content">
                   <h3>Admissão na OAB</h3>
-                  <p>OAB/UF 12345 - Ativa desde 2025</p>
+                  <p>OAB/UF 12345 </p>
                 </div>
               </div>
               

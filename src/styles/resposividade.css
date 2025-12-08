@@ -1,0 +1,721 @@
+/* ============================================
+   RESPONSIVIDADE COMPLETA - LANDING PAGE
+   Mobile S (320px), Mobile M (375px), 
+   Mobile L (425px), Tablet (768px)
+============================================= */
+
+/* =============== GERAL =============== */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  section {
+    padding: 40px 0 !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .card {
+    padding: 20px 16px !important;
+  }
+
+  .btn {
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+    gap: 6px !important;
+  }
+}
+
+/* Ajustes específicos para telas muito pequenas */
+@media (max-width: 375px) {
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .btn {
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* =============== HERO =============== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-card {
+    padding: 20px !important;
+  }
+
+  .hero-badges {
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+    justify-content: center !important;
+  }
+
+  .badge {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    gap: 4px !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .hero-title {
+    font-size: 1.75rem !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+    text-align: center !important;
+  }
+
+  .hero-description {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+    line-height: 1.6 !important;
+  }
+
+  .hero-stats {
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    gap: 12px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .stat {
+    flex: 1 !important;
+    min-width: 80px !important;
+  }
+
+  .stat-number {
+    font-size: 1.5rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.75rem !important;
+  }
+
+  .hero-cta {
+    gap: 16px !important;
+  }
+
+  .btn-lg {
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 1rem !important;
+  }
+
+  .cta-buttons-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .hero-image-wrapper {
+    transform: none !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-photo {
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-title {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  .hero-stats {
+    gap: 8px !important;
+  }
+
+  .stat-number {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-badges {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-stats {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+}
+
+/* =============== ÁREAS DE ATUAÇÃO =============== */
+@media (max-width: 768px) {
+  .areas-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .area-card {
+    padding: 20px !important;
+  }
+
+  .area-icon-wrapper {
+    width: 48px !important;
+    height: 48px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .area-title {
+    font-size: 1.125rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .area-desc {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .area-hover {
+    margin-top: 12px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .area-card {
+    padding: 16px !important;
+  }
+}
+
+/* =============== SOBRE MIM =============== */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .about-image-wrapper {
+    transform: none !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  .about-image {
+    height: 350px !important;
+  }
+
+  .image-decoration {
+    display: none !important;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin: 20px 0 !important;
+  }
+
+  .achievement-card {
+    padding: 12px !important;
+    gap: 12px !important;
+  }
+
+  .achievement-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .achievement-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .achievement-value {
+    font-size: 1.125rem !important;
+  }
+
+  .achievement-label {
+    font-size: 0.75rem !important;
+  }
+
+  .about-text {
+    font-size: 0.95rem !important;
+    padding: 16px !important;
+    margin: 20px 0 !important;
+  }
+
+  .timeline {
+    padding-left: 20px !important;
+    margin: 24px 0 !important;
+  }
+
+  .timeline-item {
+    margin-bottom: 20px !important;
+  }
+
+  .timeline-item::before {
+    left: -29px !important;
+  }
+
+  .timeline-year {
+    font-size: 0.75rem !important;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem !important;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem !important;
+  }
+
+  .about-cta {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 24px !important;
+  }
+
+  .about-cta .btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .achievements-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-image {
+    height: 300px !important;
+  }
+}
+
+/* =============== COMO ATUAMOS =============== */
+@media (max-width: 768px) {
+  .how-process {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .process-timeline {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 20px !important;
+  }
+
+  .timeline-line {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 0 10px !important;
+    gap: 0 !important;
+  }
+
+  .timeline-line::before {
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    width: 100% !important;
+    height: 2px !important;
+  }
+
+  .timeline-dot {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .dot-inner {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .dot-inner svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .dot-label {
+    display: none !important;
+  }
+
+  .process-step-card {
+    padding: 16px !important;
+  }
+
+  .step-header {
+    gap: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .step-icon-wrapper {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .step-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .step-title {
+    font-size: 1rem !important;
+  }
+
+  .step-number {
+    font-size: 0.75rem !important;
+  }
+
+  .step-desc {
+    font-size: 0.85rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .detail-item {
+    font-size: 0.8rem !important;
+  }
+
+  .detail-item svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .timeline-dot {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .dot-inner {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* =============== CONTATO =============== */
+@media (max-width: 768px) {
+  .contact-header {
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .contact-logo {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .logo-image {
+    height: 56px !important;
+  }
+
+  .contact-cta .btn {
+    width: 100% !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .contact-info {
+    padding-right: 0 !important;
+    border-right: none !important;
+    padding-bottom: 24px !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  .social-section {
+    padding-left: 0 !important;
+  }
+
+  .contact-title, .social-title {
+    font-size: 1.25rem !important;
+  }
+
+  .contact-subtitle, .social-subtitle {
+    font-size: 0.95rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .info-grid, .social-grid {
+    gap: 12px !important;
+  }
+
+  .info-card, .social-card {
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+
+  .info-icon-wrapper, .social-icon-wrapper {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .info-icon-wrapper svg, .social-icon-wrapper svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .info-label, .social-handle {
+    font-size: 0.75rem !important;
+  }
+
+  .info-value, .social-name {
+    font-size: 0.9rem !important;
+  }
+
+  .copy-btn, .action-link {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .social-followers {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .info-card, .social-card {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .info-content, .social-content {
+    text-align: center !important;
+  }
+
+  .info-card .copy-btn,
+  .info-card .action-link {
+    align-self: center !important;
+  }
+}
+
+/* =============== FOOTER =============== */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 0 20px !important;
+  }
+
+  .footer-grid {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .footer-brand {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .footer-credentials {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .credential-item {
+    width: 100% !important;
+    max-width: 280px !important;
+    justify-content: center !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .footer-links {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .footer-disclaimer {
+    padding: 16px !important;
+  }
+
+  .footer-disclaimer p {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* =============== WHATSAPP BUTTON =============== */
+@media (max-width: 768px) {
+  .whatsapp-fab {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .whatsapp-fab svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .whatsapp-chat {
+    width: calc(100% - 32px) !important;
+    right: 16px !important;
+    bottom: 84px !important;
+    max-height: 60vh !important;
+  }
+
+  .chat-header {
+    padding: 16px !important;
+  }
+
+  .chat-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .chat-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .chat-name {
+    font-size: 1rem !important;
+  }
+
+  .chat-status {
+    font-size: 0.7rem !important;
+  }
+
+  .chat-content {
+    padding: 16px !important;
+  }
+
+  .message-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.875rem !important;
+  }
+
+  .message-bubble {
+    max-width: 220px !important;
+    padding: 12px !important;
+  }
+
+  .message-sender {
+    font-size: 0.8rem !important;
+  }
+
+  .message-text {
+    font-size: 0.85rem !important;
+  }
+
+  .quick-messages {
+    margin: 16px 0 !important;
+  }
+
+  .quick-buttons {
+    grid-template-columns: 1fr !important;
+  }
+
+  .quick-btn {
+    padding: 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .chat-actions {
+    gap: 12px !important;
+  }
+
+  .chat-info {
+    grid-template-columns: 1fr !important;
+  }
+
+  .info-item {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .whatsapp-chat {
+    width: calc(100% - 24px) !important;
+    right: 12px !important;
+  }
+}
+
+/* =============== UTILITÁRIOS =============== */
+/* Esconder elementos não essenciais em mobile */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  /* Melhorar espaçamento geral */
+  br {
+    display: none;
+  }
+
+  /* Garantir que imagens não estourem */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Melhorar legibilidade do texto */
+  p, li, span:not(.icon) {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Ajustes para landscape em mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    padding: 30px 0 !important;
+  }
+
+  .hero-photo {
+    height: 250px !important;
+  }
+
+  .whatsapp-chat {
+    max-height: 50vh !important;
+  }
+}
+
+/* Suporte a dark mode em mobile */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  .card {
+    background: #1a1a1a !important;
+    border-color: #333 !important;
+  }
+
+  .btn-secondary {
+    background: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #fff !important;
+  }
+}
