@@ -78,31 +78,6 @@ export default function About() {
               Minha abordagem combina expertise técnica com atenção personalizada a cada cliente, 
               garantindo soluções jurídicas eficazes e estratégicas.
             </p>
-            
-            <div className="timeline">
-              <div className="timeline-item fade-in">
-                <div className="timeline-year">Formação Jurídica</div>
-                <div className="timeline-content">
-                  <h3>Graduação em Direito</h3>
-                  <p>URCA – Bacharelado em Direito</p>
-                </div>
-              </div>
-              
-              <div className="timeline-item fade-in">
-                <div className="timeline-year">Credenciamento Profissional</div>
-                <div className="timeline-content">
-                  <h3>Admissão na OAB</h3>
-                  <p>OAB/UF 12345 </p>
-                </div>
-              </div>
-              
-              <div className="timeline-item fade-in">
-                <div className="timeline-year">Atuação</div>
-                <div className="timeline-content">
-                  <h3>Especializações</h3>
-                  <p>Processos trabalhistas, consultoria, audiências...</p>
-                </div>
-              </div>
             </div>
             
             <div className="about-cta">
@@ -115,7 +90,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 }

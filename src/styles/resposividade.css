@@ -36,8 +36,21 @@
   }
 }
 
-/* Ajustes específicos para telas muito pequenas */
+/* ALTERAÇÃO 1: 320px com mesma configuração de 375px */
 @media (max-width: 375px) {
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .btn {
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Aplicar as mesmas configurações para 320px */
+@media (max-width: 320px) {
   .container {
     padding-left: 12px !important;
     padding-right: 12px !important;
@@ -51,13 +64,29 @@
 
 /* =============== HERO =============== */
 @media (max-width: 768px) {
+  /* ALTERAÇÃO 2: Hero preencher toda a tela sem espaços mas com border-radius */
   .hero-section {
-    padding-top: 60px !important;
-    padding-bottom: 40px !important;
+    padding-top: 0 !important; /* Remove espaço superior */
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-section .container {
+    padding-left: 0 !important; /* Remove espaços laterais */
+    padding-right: 0 !important;
+    max-width: 100% !important; /* Ocupa 100% da largura */
   }
 
   .hero-card {
-    padding: 20px !important;
+    padding: 20px 16px !important;
+    /* CORREÇÃO: Adicionar border-radius */
+    border-radius: 12px !important; /* Border-radius para mobile */
+    box-shadow: var(--shadow) !important; /* Manter sombra leve */
+    border: 1px solid var(--border) !important;
+    margin: 16px !important; /* Adicionar margem interna */
+    width: calc(100% - 32px) !important; /* Ajustar largura considerando margem */
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .hero-badges {
@@ -134,6 +163,7 @@
     transform: none !important;
     max-width: 280px !important;
     margin: 0 auto !important;
+    border-radius: 12px !important; /* Border-radius para a imagem */
   }
 
   .hero-photo {
@@ -157,17 +187,70 @@
   .stat-number {
     font-size: 1.25rem !important;
   }
+  
+  .hero-card {
+    border-radius: 10px !important; /* Border-radius menor para telas menores */
+    margin: 12px !important;
+    width: calc(100% - 24px) !important;
+  }
+}
+
+/* centraliza badges no hero em telas pequenas */
+@media (max-width: 425px) {
+  .hero-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+  }
+
+  .hero-badges .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ajuste extra para telas muito pequenas */
+@media (max-width: 360px) {
+  .hero-badges .badge {
+    padding: 5px 10px;
+    font-size: 0.88rem;
+  }
 }
 
 @media (max-width: 320px) {
   .hero-badges {
-    flex-direction: column !important;
+    flex-direction: row !important; /* Mantém em linha */
     align-items: center !important;
+    justify-content: flex-start !important; /* Alinha à esquerda */
+    overflow-x: auto !important; /* Permite scroll horizontal */
+    padding-bottom: 8px !important;
   }
 
   .hero-stats {
-    flex-direction: column !important;
-    gap: 16px !important;
+    flex-direction: row !important; /* Mantém em linha */
+    gap: 10px !important;
+    justify-content: space-between !important;
+  }
+
+  .stat {
+    flex: 1 !important;
+  }
+
+  .badge {
+    white-space: nowrap !important; /* Evita quebra de linha */
+    flex-shrink: 0 !important; /* Não encolhe */
+  }
+  
+  .hero-card {
+    border-radius: 8px !important; /* Border-radius ainda menor para 320px */
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
   }
 }
 
@@ -211,15 +294,27 @@
 
 /* =============== SOBRE MIM =============== */
 @media (max-width: 768px) {
+  /* CORREÇÃO: Container do Sobre Mim centralizado igual outras seções */
+  .about-section .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  
   .about-grid {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
+    text-align: center !important; /* Centralizar conteúdo geral */
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .about-image-wrapper {
     transform: none !important;
     max-width: 280px !important;
-    margin: 0 auto !important;
+    margin: 0 auto !important; /* Mantém imagem centralizada */
   }
 
   .about-image {
@@ -230,20 +325,32 @@
     display: none !important;
   }
 
+  /* Ajuste para grid de achievements - 2x2 em telas menores */
   .achievements-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 colunas */
+    grid-template-rows: repeat(2, auto) !important; /* 2 linhas */
     gap: 12px !important;
-    margin: 20px 0 !important;
+    margin: 20px auto !important; /* Centralizar grid */
+    max-width: 500px !important;
+    width: 100% !important;
   }
 
   .achievement-card {
     padding: 12px !important;
     gap: 12px !important;
+    text-align: center !important; /* Centralizar texto dos cards */
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .achievement-icon {
     width: 36px !important;
     height: 36px !important;
+    margin: 0 auto 8px auto !important; /* Centralizar ícone */
   }
 
   .achievement-icon svg {
@@ -253,25 +360,45 @@
 
   .achievement-value {
     font-size: 1.125rem !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 
   .achievement-label {
     font-size: 0.75rem !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 
+  /* CORREÇÃO: Container do texto centralizado */
   .about-text {
     font-size: 0.95rem !important;
     padding: 16px !important;
-    margin: 20px 0 !important;
+    margin: 20px auto !important; /* Centralizar */
+    text-align: center !important; /* Texto centralizado */
+    max-width: 600px !important;
+    width: 100% !important;
+    border-left: none !important; /* Remover borda esquerda */
+    border-radius: var(--radius) !important; /* Adicionar border-radius */
+    display: block !important;
+    box-sizing: border-box !important;
   }
 
+  /* CORREÇÃO: Timeline centralizada */
   .timeline {
     padding-left: 20px !important;
-    margin: 24px 0 !important;
+    margin: 24px auto !important; /* Centralizar */
+    max-width: 500px !important;
+    width: 100% !important;
+    text-align: left !important; /* Timeline alinhada à esquerda mas container centralizado */
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
   }
 
   .timeline-item {
     margin-bottom: 20px !important;
+    width: 100% !important;
   }
 
   .timeline-item::before {
@@ -280,34 +407,153 @@
 
   .timeline-year {
     font-size: 0.75rem !important;
+    text-align: left !important;
   }
 
   .timeline-content h3 {
     font-size: 1rem !important;
+    text-align: left !important;
   }
 
   .timeline-content p {
     font-size: 0.85rem !important;
+    text-align: left !important;
   }
 
+  /* CORREÇÃO: Botões centralizados */
   .about-cta {
     flex-direction: column !important;
     gap: 10px !important;
     margin-top: 24px !important;
+    align-items: center !important; /* Centralizar botões */
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .about-cta .btn {
-    width: 100% !important;
+    width: auto !important;
+    min-width: 200px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
   }
 }
 
 @media (max-width: 425px) {
+  /* CORREÇÃO: Container do Sobre Mim com padding consistente */
+  .about-section .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  /* NOVA ALTERAÇÃO: Layout 2 em cima, 2 embaixo para achievements */
   .achievements-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr !important; /* 2 colunas */
+    grid-template-rows: auto auto !important; /* 2 linhas */
+    gap: 10px !important;
+    max-width: 100% !important;
+    margin: 16px 0 !important;
+  }
+  
+  /* Organizar a ordem: 1 e 2 na primeira linha, 3 e 4 na segunda linha */
+  .achievement-card:nth-child(1) {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+  
+  .achievement-card:nth-child(2) {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  
+  .achievement-card:nth-child(3) {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+  
+  .achievement-card:nth-child(4) {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+
+  .achievement-card {
+    padding: 10px !important;
+    gap: 8px !important;
+    text-align: center !important; /* Centralizar conteúdo nos cards */
+    flex-direction: column !important;
+  }
+  
+  .achievement-icon {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 auto !important;
+  }
+  
+  .achievement-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  .achievement-value {
+    font-size: 1rem !important;
+    margin-top: 4px !important;
+  }
+  
+  .achievement-label {
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
   }
 
   .about-image {
     height: 300px !important;
+  }
+  
+  .about-text {
+    padding: 12px !important;
+    margin: 16px auto !important;
+    max-width: 100% !important;
+  }
+  
+  .about-cta .btn {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+  
+  /* CORREÇÃO: Timeline com largura total */
+  .timeline {
+    max-width: 100% !important;
+    padding-left: 24px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Ajustes finos para telas muito pequenas */
+  .about-section .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .achievements-grid {
+    gap: 8px !important;
+  }
+  
+  .achievement-card {
+    padding: 8px !important;
+  }
+  
+  .achievement-value {
+    font-size: 0.9rem !important;
+  }
+  
+  .achievement-label {
+    font-size: 0.65rem !important;
+  }
+  
+  .about-text {
+    padding: 10px !important;
+    margin: 12px auto !important;
   }
 }
 
@@ -416,6 +662,25 @@
 
 /* =============== CONTATO =============== */
 @media (max-width: 768px) {
+  /* ALTERAÇÃO 2: Contatos preencher toda a tela sem espaços mas com border-radius */
+  .contact-section .container {
+    padding-left: 0 !important; /* Remove espaços laterais */
+    padding-right: 0 !important;
+    max-width: 100% !important; /* Ocupa 100% da largura */
+  }
+
+  .contact-card {
+    padding: 20px 16px !important;
+    /* CORREÇÃO: Adicionar border-radius */
+    border-radius: 12px !important; /* Border-radius para mobile */
+    box-shadow: var(--shadow) !important; /* Manter sombra leve */
+    border: 1px solid var(--border) !important;
+    margin: 16px !important; /* Adicionar margem interna */
+    width: calc(100% - 32px) !important; /* Ajustar largura considerando margem */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   .contact-header {
     flex-direction: column !important;
     gap: 20px !important;
@@ -431,6 +696,7 @@
 
   .logo-image {
     height: 56px !important;
+    border-radius: 8px !important; /* Border-radius para logo */
   }
 
   .contact-cta .btn {
@@ -440,6 +706,7 @@
   .contact-grid {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
+    padding: 0 16px !important; /* Mantém padding interno */
   }
 
   .contact-info {
@@ -469,11 +736,13 @@
   .info-card, .social-card {
     padding: 16px !important;
     gap: 12px !important;
+    border-radius: 8px !important; /* Border-radius para cards internos */
   }
 
   .info-icon-wrapper, .social-icon-wrapper {
     width: 40px !important;
     height: 40px !important;
+    border-radius: 8px !important; /* Border-radius para ícones */
   }
 
   .info-icon-wrapper svg, .social-icon-wrapper svg {
@@ -492,15 +761,30 @@
   .copy-btn, .action-link {
     padding: 6px 12px !important;
     font-size: 0.75rem !important;
+    border-radius: 6px !important; /* Border-radius para botões */
   }
 
   .social-followers {
     font-size: 0.75rem !important;
     padding: 3px 8px !important;
+    border-radius: 6px !important; /* Border-radius para seguidores */
   }
 }
 
 @media (max-width: 425px) {
+  .contact-card,
+  .hero-card {
+    padding: 16px 12px !important;
+    border-radius: 10px !important; /* Border-radius menor para telas menores */
+    margin: 12px !important;
+    width: calc(100% - 24px) !important;
+  }
+  
+  .contact-grid,
+  .hero-content {
+    padding: 0 12px !important;
+  }
+  
   .info-card, .social-card {
     flex-direction: column !important;
     text-align: center !important;
@@ -513,6 +797,15 @@
   .info-card .copy-btn,
   .info-card .action-link {
     align-self: center !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-card,
+  .hero-card {
+    border-radius: 8px !important; /* Border-radius ainda menor para 320px */
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
   }
 }
 
@@ -544,6 +837,7 @@
     width: 100% !important;
     max-width: 280px !important;
     justify-content: center !important;
+    border-radius: 20px !important; /* Border-radius para credenciais */
   }
 
   .footer-bottom {
@@ -560,6 +854,7 @@
 
   .footer-disclaimer {
     padding: 16px !important;
+    border-radius: 8px !important; /* Border-radius para disclaimer */
   }
 
   .footer-disclaimer p {
@@ -586,15 +881,19 @@
     right: 16px !important;
     bottom: 84px !important;
     max-height: 60vh !important;
+    border-radius: 12px !important; /* Border-radius para chat */
   }
 
   .chat-header {
     padding: 16px !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
   }
 
   .chat-icon {
     width: 32px !important;
     height: 32px !important;
+    border-radius: 8px !important; /* Border-radius para ícone */
   }
 
   .chat-icon svg {
@@ -618,11 +917,13 @@
     width: 32px !important;
     height: 32px !important;
     font-size: 0.875rem !important;
+    border-radius: 50% !important;
   }
 
   .message-bubble {
     max-width: 220px !important;
     padding: 12px !important;
+    border-radius: 18px !important; /* Border-radius para balões */
   }
 
   .message-sender {
@@ -644,6 +945,7 @@
   .quick-btn {
     padding: 10px !important;
     font-size: 0.8rem !important;
+    border-radius: 8px !important; /* Border-radius para botões rápidos */
   }
 
   .chat-actions {
@@ -663,6 +965,7 @@
   .whatsapp-chat {
     width: calc(100% - 24px) !important;
     right: 12px !important;
+    border-radius: 10px !important; /* Border-radius menor para 320px */
   }
 }
 
@@ -682,12 +985,22 @@
   img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px !important; /* Border-radius padrão para imagens */
   }
 
   /* Melhorar legibilidade do texto */
   p, li, span:not(.icon) {
     word-break: break-word;
     hyphens: auto;
+  }
+  
+  /* Border-radius geral para cards em mobile */
+  .area-card, 
+  .process-step-card,
+  .achievement-card,
+  .info-card,
+  .social-card {
+    border-radius: 10px !important;
   }
 }
 
@@ -703,6 +1016,12 @@
 
   .whatsapp-chat {
     max-height: 50vh !important;
+  }
+  
+  .hero-card,
+  .contact-card {
+    margin: 8px !important;
+    width: calc(100% - 16px) !important;
   }
 }
 

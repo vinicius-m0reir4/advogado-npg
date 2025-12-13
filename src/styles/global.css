@@ -600,7 +600,7 @@ section:nth-child(even) {
   border-left: 4px solid var(--primary);
 }
 
-.timeline {
+/*.timeline {
   position: relative;
   margin: 40px 0;
   padding-left: 32px;
@@ -664,7 +664,7 @@ section:nth-child(even) {
   display: flex;
   gap: 16px;
   margin-top: 32px;
-}
+}*/
 
 /* How We Work Premium */
 .how-section {

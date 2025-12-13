@@ -38,10 +38,6 @@ export default function Hero() {
             {/* Badges de credibilidade */}
             <div className="hero-badges">
               <span className="badge">
-                <Award size={16} />
-                <span>OAB Ativa</span>
-              </span>
-              <span className="badge">
                 <CheckCircle size={16} />
                 <span>Atendimento Online</span>
               </span>
