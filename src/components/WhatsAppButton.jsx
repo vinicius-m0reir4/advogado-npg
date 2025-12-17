@@ -1,16 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 
-const WhatsAppButton = () => {
+const WhatsAppButton = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [customMessage, setCustomMessage] = useState("");
 
   const phone = "558897264361";
-  const message = encodeURIComponent(
-    "Olá! Gostaria de obter informações sobre serviços jurídicos."
-  );
-  const link = `https://wa.me/${phone}?text=${message}`;
+  
+  // Mensagem padrão
+  const defaultMessage = "Olá! Gostaria de obter informações sobre serviços jurídicos.";
+  
+  // Função para abrir o chat com uma mensagem específica
+  const openChat = (message = defaultMessage) => {
+    if (message) {
+      setCustomMessage(message);
+    }
+    setIsOpen(true);
+    setIsVisible(true);
+    
+    // Rolagem suave para mostrar o chat se necessário
+    setTimeout(() => {
+      const chatElement = document.querySelector('.whatsapp-chat.open');
+      if (chatElement) {
+        chatElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }, 100);
+  };
+
+  // Expõe a função openChat para componentes externos
+  useImperativeHandle(ref, () => ({
+    openChat
+  }));
+
+  // Link do WhatsApp baseado na mensagem atual
+  const getWhatsAppLink = (msg = customMessage || defaultMessage) => {
+    const encodedMsg = encodeURIComponent(msg);
+    return `https://wa.me/${phone}?text=${encodedMsg}`;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,8 +66,7 @@ const WhatsAppButton = () => {
   ];
 
   const handleQuickMessage = (msg) => {
-    const encodedMsg = encodeURIComponent(msg);
-    window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+    window.open(getWhatsAppLink(msg), '_blank');
   };
 
   return (
@@ -108,7 +135,7 @@ const WhatsAppButton = () => {
 
           <div className="chat-actions">
             <a 
-              href={link}
+              href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary btn-block"
@@ -140,6 +167,6 @@ const WhatsAppButton = () => {
       )}
     </>
   );
-};
+});
 
 export default WhatsAppButton;

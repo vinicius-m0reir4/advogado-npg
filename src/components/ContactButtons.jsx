@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import logoSmall from '../assets/logo1.png';
 import { Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 
-export default function ContactButtons() {
+export default function ContactButtons({ whatsappRef }) {
   const [copied, setCopied] = useState(false);
   const waNumber = '558897264361';
-  const waMessage = encodeURIComponent('Olá! Gostaria de uma triagem rápida.');
+  const waMessage = 'Olá! Gostaria de uma triagem rápida.';
   const email = 'contato@vitoriaqueiroz.com.br';
 
   const copyEmail = () => {
@@ -19,6 +19,20 @@ export default function ContactButtons() {
     { icon: <Mail />, label: 'E-mail', value: email, action: null, copy: true },
     { icon: <MapPin />, label: 'Escritório', value: 'Av. Paulista, 1000 - São Paulo/SP', action: 'https://maps.google.com' },
   ];
+
+  // Função para lidar com o clique no botão "Fale Direto no WhatsApp"
+  const handleFaleDireto = (e) => {
+    e.preventDefault();
+    
+    // Se tiver a referência do WhatsAppButton, usa ela
+    if (whatsappRef && whatsappRef.current) {
+      whatsappRef.current.openChat(waMessage);
+    } else {
+      // Fallback: abre o WhatsApp diretamente
+      const encodedMessage = encodeURIComponent(waMessage);
+      window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, '_blank');
+    }
+  };
 
   return (
     <section className="contact-section" aria-label="Contatos e redes sociais">
@@ -34,15 +48,14 @@ export default function ContactButtons() {
             </div>
             
             <div className="contact-cta">
-              <a 
-                href={`https://wa.me/${waNumber}?text=${waMessage}`}
-                target="_blank"
-                rel="noreferrer"
+              <button 
                 className="btn btn-primary btn-lg"
+                onClick={handleFaleDireto}
+                aria-label="Falar direto no WhatsApp"
               >
                 <MessageCircle size={20} />
                 <span>Fale Direto no WhatsApp</span>
-              </a>
+              </button>
             </div>
           </div>
 

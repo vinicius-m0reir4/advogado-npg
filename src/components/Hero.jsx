@@ -2,11 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import profile from '../assets/profile-hero.jpg';
 import { ArrowRight, Star, Award, CheckCircle } from 'lucide-react';
 
-
-export default function Hero() {
+export default function Hero({ whatsappRef }) {
   const heroRef = useRef(null);
-  const waNumber = '558897264361';
-  const waMessage = encodeURIComponent('Olá! Gostaria de uma triagem rápida.');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,6 +23,21 @@ export default function Hero() {
 
     return () => observer.disconnect();
   }, []);
+
+  // Função para lidar com o clique no botão de Consultoria Gratuita
+  const handleConsultoriaClick = (e) => {
+    e.preventDefault();
+    
+    // Se tiver a referência do WhatsAppButton, usa ela
+    if (whatsappRef && whatsappRef.current) {
+      whatsappRef.current.openChat('Olá! Gostaria de uma triagem rápida.');
+    } else {
+      // Fallback: abre o WhatsApp diretamente (comportamento original)
+      const waNumber = '558897264361';
+      const waMessage = encodeURIComponent('Olá! Gostaria de uma triagem rápida.');
+      window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
+    }
+  };
 
   return (
     <section 
@@ -78,15 +90,14 @@ export default function Hero() {
                 </div>
 
                 <div className="hero-cta">
-                  <a 
+                  <button 
                     className="btn btn-primary btn-lg" 
-                    href={`https://wa.me/${waNumber}?text=${waMessage}`}
-                    target="_blank" 
-                    rel="noreferrer"
+                    onClick={handleConsultoriaClick}
+                    aria-label="Abrir consultoria gratuita no WhatsApp"
                   >
                     <span>Consultoria Gratuita</span>
                     <ArrowRight size={20} />
-                  </a>
+                  </button>
                   
                   <div className="cta-buttons-grid">
                     <a className="btn btn-secondary" href="#areas">
@@ -110,7 +121,6 @@ export default function Hero() {
                     alt="Vitória Queiroz — Advogada Especialista" 
                   />
                   <div className="hero-image-overlay"></div>
-                 
                 </div>
               </div>
             </div>

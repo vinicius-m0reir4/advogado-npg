@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import profileFull from '../assets/profile-full.jpg';
 import { Award, AlarmClock, Users, Target } from 'lucide-react';
 
-export default function About() {
+export default function About({ whatsappRef }) {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -36,6 +36,21 @@ export default function About() {
     { icon: <Users />, value: '100%', label: 'Assistência' },
     { icon: <Target />, value: '+50', label: 'Empresas Atendidas' },
   ];
+
+  // Função para lidar com o clique no botão "Agendar Consulta"
+  const handleAgendarConsulta = (e) => {
+    e.preventDefault();
+    
+    // Se tiver a referência do WhatsAppButton, usa ela
+    if (whatsappRef && whatsappRef.current) {
+      whatsappRef.current.openChat('Olá! Gostaria de agendar uma consulta.');
+    } else {
+      // Fallback: abre o WhatsApp diretamente
+      const waNumber = '558897264361';
+      const waMessage = encodeURIComponent('Olá! Gostaria de agendar uma consulta.');
+      window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
+    }
+  };
 
   return (
     <section id="about" ref={sectionRef} className="about-section">
@@ -78,19 +93,22 @@ export default function About() {
               Minha abordagem combina expertise técnica com atenção personalizada a cada cliente, 
               garantindo soluções jurídicas eficazes e estratégicas.
             </p>
-            </div>
             
             <div className="about-cta">
-              <a href="#contact" className="btn btn-primary">
+              <button 
+                className="btn btn-primary"
+                onClick={handleAgendarConsulta}
+                aria-label="Agendar consulta via WhatsApp"
+              >
                 Agendar Consulta
-              </a>
+              </button>
               <a href="#areas" className="btn btn-secondary">
                 Ver Especialidades
               </a>
             </div>
           </div>
         </div>
-      
+      </div>
     </section>
   );
 }

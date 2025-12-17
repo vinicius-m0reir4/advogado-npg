@@ -6,15 +6,15 @@ import ContactButtons from '../components/ContactButtons';
 import Footer from '../components/Footer';
 import HowWeWork from '../components/HowWeWork';
 
-
-export default function Home() {
+export default function Home({ whatsappRef }) {
   return (
     <main>
-      <Hero />
+      {/* Passa a referência do WhatsApp para os componentes que têm botões de WhatsApp */}
+      <Hero whatsappRef={whatsappRef} />
       <PracticeAreas />
-      <About />
+      <About whatsappRef={whatsappRef} />
       <HowWeWork />
-      <ContactButtons />
+      <ContactButtons whatsappRef={whatsappRef} />
       <Footer />
     </main>
   );
