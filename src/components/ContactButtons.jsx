@@ -4,7 +4,7 @@ import { Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactButtons() {
   const [copied, setCopied] = useState(false);
-  const waNumber = '5511999999999';
+  const waNumber = '558897264361';
   const waMessage = encodeURIComponent('Olá! Gostaria de uma triagem rápida.');
   const email = 'contato@vitoriaqueiroz.com.br';
 
@@ -15,7 +15,7 @@ export default function ContactButtons() {
   };
 
   const contactInfo = [
-    { icon: <Phone />, label: 'Telefone', value: '(11) 99999-9999', action: 'tel:5511999999999' },
+    { icon: <Phone />, label: 'Telefone', value: '558897264361', action: 'tel:558897264361' },
     { icon: <Mail />, label: 'E-mail', value: email, action: null, copy: true },
     { icon: <MapPin />, label: 'Escritório', value: 'Av. Paulista, 1000 - São Paulo/SP', action: 'https://maps.google.com' },
   ];
@@ -96,7 +96,7 @@ export default function ContactButtons() {
               <div className="social-grid">
                 <a 
                   className="social-card instagram"
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/vitoria.queir0z/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
@@ -106,14 +106,14 @@ export default function ContactButtons() {
                   </div>
                   <div className="social-content">
                     <div className="social-name">Instagram</div>
-                    <div className="social-handle">@vitoriaqueirozadv</div>
+                    <div className="social-handle">@vitoria.queir0z</div>
                   </div>
                   <div className="social-followers">Seguir</div>
                 </a>
                 
                 <a 
                   className="social-card tiktok"
-                  href="https://tiktok.com"
+                  href="https://www.tiktok.com/@vitoria.queirozadv"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TikTok"
@@ -125,7 +125,7 @@ export default function ContactButtons() {
                   </div>
                   <div className="social-content">
                     <div className="social-name">TikTok</div>
-                    <div className="social-handle">@vqueiroz.adv</div>
+                    <div className="social-handle">@vitoria.queirozadv</div>
                   </div>
                   <div className="social-followers">Seguir</div>
                 </a>

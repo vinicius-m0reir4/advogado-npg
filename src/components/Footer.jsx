@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
             <div className="credential-item">
               <Clock size={16} />
-              <span>Atendimento: Seg-Sex 09:00-18:00</span>
+              <span>Atendimento: Seg-Sex</span>
             </div>
             <div className="credential-item">
               <CheckCircle size={16} />

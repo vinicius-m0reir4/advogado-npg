@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import profile from '../assets/profile-hero.jpg';
 import { ArrowRight, Star, Award, CheckCircle } from 'lucide-react';
 
+
 export default function Hero() {
   const heroRef = useRef(null);
-  const waNumber = '5511999999999';
+  const waNumber = '558897264361';
   const waMessage = encodeURIComponent('Olá! Gostaria de uma triagem rápida.');
 
   useEffect(() => {
@@ -67,12 +68,12 @@ export default function Hero() {
                     <div className="stat-label">Casos Resolvidos</div>
                   </div>
                   <div className="stat">
-                    <div className="stat-number">100%</div>
-                    <div className="stat-label">Satisfação</div>
+                    <div className="stat-number">+50</div>
+                    <div className="stat-label">Empresas Atendidas</div>
                   </div>
                   <div className="stat">
                     <div className="stat-number">24h</div>
-                    <div className="stat-label">Resposta</div>
+                    <div className="stat-label">Atendimento</div>
                   </div>
                 </div>
 

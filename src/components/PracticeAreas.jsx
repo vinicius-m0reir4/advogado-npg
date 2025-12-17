@@ -69,9 +69,6 @@ export default function PracticeAreas() {
                   <p className="area-desc">{a.desc}</p>
                 </div>
                 
-                <div className="area-hover">
-                  <span className="area-link">Saiba mais →</span>
-                </div>
               </div>
             </div>
           ))}

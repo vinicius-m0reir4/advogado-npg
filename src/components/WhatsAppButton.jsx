@@ -6,7 +6,7 @@ const WhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const phone = "5511999999999";
+  const phone = "558897264361";
   const message = encodeURIComponent(
     "Olá! Gostaria de obter informações sobre serviços jurídicos."
   );

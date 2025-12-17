@@ -5,7 +5,7 @@ export default function MetaTags() {
   return (
     <Helmet>
       {/* Título dinâmico para diferentes páginas */}
-      <title>Dra. Vitória Queiroz - Advogada Trabalhista e Cível | OAB/UF 12345</title>
+      <title>Dra. Vitória Queiroz </title>
       
       {/* Meta tags dinâmicas */}
       <meta name="description" content="Advogada especializada em Direito Trabalhista e Cível. Atendimento personalizado com foco em resultados. Consultoria online e presencial em São Paulo." />

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import profileFull from '../assets/profile-full.jpg';
-import { Award, BookOpen, Users, Target } from 'lucide-react';
+import { Award, AlarmClock, Users, Target } from 'lucide-react';
 
 export default function About() {
   const sectionRef = useRef(null);
@@ -32,8 +32,8 @@ export default function About() {
 
   const achievements = [
     { icon: <Award />, value: '+500', label: 'Casos Concluídos' },
-    { icon: <BookOpen />, value: '10', label: 'Anos Experiência' },
-    { icon: <Users />, value: '98%', label: 'Satisfação Clientes' },
+    { icon: <AlarmClock />, value: '24h', label: 'Atendimento' },
+    { icon: <Users />, value: '100%', label: 'Assistência' },
     { icon: <Target />, value: '+50', label: 'Empresas Atendidas' },
   ];
 
