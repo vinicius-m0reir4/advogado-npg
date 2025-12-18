@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="footer-credentials">
             <div className="credential-item">
               <Shield size={16} />
-              <span>OAB/UF 12345 Ativa</span>
+              <span>OAB/CE 56484</span>
             </div>
             <div className="credential-item">
               <Clock size={16} />

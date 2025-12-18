@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logoSmall from '../assets/logo1.png';
-import { Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, MessageCircle, Mail, Phone, MapPin, } from 'lucide-react';
 
 export default function ContactButtons({ whatsappRef }) {
   const [copied, setCopied] = useState(false);
@@ -43,7 +43,7 @@ export default function ContactButtons({ whatsappRef }) {
               <img src={logoSmall} alt="Logotipo Vitória Queiroz" className="logo-image" />
               <div className="logo-text">
                 <div className="logo-name">Vitória Queiroz</div>
-                <div className="logo-oab">OAB/UF 12345</div>
+                <div className="logo-oab">OAB/CE 56484</div>
               </div>
             </div>
             
