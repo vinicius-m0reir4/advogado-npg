@@ -17,7 +17,7 @@ export default function ContactButtons({ whatsappRef }) {
   const contactInfo = [
     { icon: <Phone />, label: 'Telefone', value: '558897264361', action: 'tel:558897264361' },
     { icon: <Mail />, label: 'E-mail', value: email, action: null, copy: true },
-    { icon: <MapPin />, label: 'Escritório', value: 'Av. Paulista, 1000 - São Paulo/SP', action: 'https://maps.google.com' },
+    { icon: <MapPin />, label: 'Escritório', value: 'Rua Raimundo Machado da Silva 60, Triangulo, Torre Trade, 8 Andar - Sala 809', action: 'https://www.google.com/maps/place/Unique+Torre+Trade/@-7.2239109,-39.3252929,17z/data=!4m10!1m2!2m1!1sRua+Raimundo+machado+da+silva,+triangulo,+nro+60,+torre+trade,+8+andar+-+sala+809!3m6!1s0x7a183591338c5b3:0x3995b80a533db3b6!8m2!3d-7.2236369!4d-39.3229278!15sClFSdWEgUmFpbXVuZG8gbWFjaGFkbyBkYSBzaWx2YSwgdHJpYW5ndWxvLCBucm8gNjAsIHRvcnJlIHRyYWRlLCA4IGFuZGFyIC0gc2FsYSA4MDlaTSJLcnVhIHJhaW11bmRvIG1hY2hhZG8gZGEgc2lsdmEgdHJpYW5ndWxvIG5ybyA2MCB0b3JyZSB0cmFkZSA4IGFuZGFyIHNhbGEgODA5kgEQY29ycG9yYXRlX29mZmljZZoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQydGtja3hVVW1wa01VcHlVbXBLTWxKVk5YZFZiV1JyWkZaT1YxVXlZeEFC4AEA-gEECAAQDg!16s%2Fg%2F11spj4q5z4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D' },
   ];
 
   // Função para lidar com o clique no botão "Fale Direto no WhatsApp"

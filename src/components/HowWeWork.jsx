@@ -59,7 +59,7 @@ export default function HowWeWork() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 8.5 }
     );
 
     if (sectionRef.current) {
