@@ -11,7 +11,7 @@ export default function ContactButtons({ whatsappRef }) {
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 15000);
   };
 
   const contactInfo = [
