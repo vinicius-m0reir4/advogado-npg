@@ -65,7 +65,7 @@ export default function Hero({ whatsappRef }) {
                 <h1 className="hero-title">
                   <span className="hero-gradient">Vitória Queiroz</span>
                   <br />
-                  <span className="hero-subtitle">Advogada Trabalhista e Cível</span>
+                  <span className="hero-subtitle">Advogada Trabalhista e Criminal</span>
                 </h1>
                 
                 <p className="hero-description">
