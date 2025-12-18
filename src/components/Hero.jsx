@@ -93,9 +93,9 @@ export default function Hero({ whatsappRef }) {
                   <button 
                     className="btn btn-primary btn-lg" 
                     onClick={handleConsultoriaClick}
-                    aria-label="Abrir consultoria gratuita no WhatsApp"
+                    aria-label="Abrir Atendimento no WhatsApp"
                   >
-                    <span>Consultoria Gratuita</span>
+                    <span>Atendimento Qualificado</span>
                     <ArrowRight size={20} />
                   </button>
                   

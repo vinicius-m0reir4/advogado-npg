@@ -1,14 +1,11 @@
 import React, { useRef, useEffect } from 'react';
-import { Scale, FileText, Landmark, Folder, Users, Briefcase, Banknote, ShieldCheck, ShoppingCart } from 'lucide-react';
+import { Scale, Landmark, Users, Briefcase, ShieldCheck, ShoppingCart } from 'lucide-react';
 
 const areas = [
   { icon: <Scale />, title: 'Direito Trabalhista', desc: 'Defesa em reclamatórias, acordos, negociações coletivas e consultoria trabalhista.' },
-  { icon: <FileText />, title: 'Direito Contratual', desc: 'Elaboração, revisão e negociação de contratos civis e empresariais.' },
   { icon: <Landmark />, title: 'Direito Penal', desc: 'Atuação em defesas, investigação e acompanhamento processual criminal.' },
-  { icon: <Folder />, title: 'Direito Cível', desc: 'Ações de responsabilidade civil, família, sucessões e consumidor.' },
   { icon: <Users />, title: 'Direito de Família', desc: 'Separações, guarda, pensão alimentícia e inventários.' },
   { icon: <Briefcase />, title: 'Direito Empresarial', desc: 'Consultoria societária, contratos comerciais e recuperação empresarial.' },
-  { icon: <Banknote />, title: 'Direito Tributário', desc: 'Planejamento tributário, contencioso administrativo e judicial.' },
   { icon: <ShieldCheck />, title: 'Direito Previdenciário', desc: 'Concessão e revisão de benefícios, recursos e perícias.' },
   { icon: <ShoppingCart />, title: 'Direito do Consumidor', desc: 'Ações de defesa do consumidor, cobranças indevidas e responsabilidade por produtos.' }
 ];

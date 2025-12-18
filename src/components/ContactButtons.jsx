@@ -5,8 +5,8 @@ import { Instagram, MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
 export default function ContactButtons({ whatsappRef }) {
   const [copied, setCopied] = useState(false);
   const waNumber = '558897264361';
-  const waMessage = 'Olá! Gostaria de uma triagem rápida.';
-  const email = 'contato@vitoriaqueiroz.com.br';
+  const waMessage = 'Olá! Gostaria de obter informações sobre serviços jurídicos.';
+  const email = 'Vitoriaqueirozadv0@gmail.com';
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);

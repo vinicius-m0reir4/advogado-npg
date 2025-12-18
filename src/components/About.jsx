@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import profileFull from '../assets/profile-full.jpg';
-import { Award, AlarmClock, Users, Target } from 'lucide-react';
+import { MapPinned, AlarmClock, } from 'lucide-react';
 
 export default function About({ whatsappRef }) {
   const sectionRef = useRef(null);
@@ -31,10 +31,8 @@ export default function About({ whatsappRef }) {
   }, []);
 
   const achievements = [
-    { icon: <Award />, value: '+500', label: 'Casos Concluídos' },
+    { icon: <MapPinned />, value: 'Todo Brasil', label: 'Atendimento em Todo o Brasil' },
     { icon: <AlarmClock />, value: '24h', label: 'Atendimento' },
-    { icon: <Users />, value: '100%', label: 'Assistência' },
-    { icon: <Target />, value: '+50', label: 'Empresas Atendidas' },
   ];
 
   // Função para lidar com o clique no botão "Agendar Consulta"
@@ -89,9 +87,13 @@ export default function About({ whatsappRef }) {
             </div>
             
             <p className="about-text">
-              Advogada com mais de 10 anos de experiência, especializada em Direito Trabalhista e Cível. 
-              Minha abordagem combina expertise técnica com atenção personalizada a cada cliente, 
-              garantindo soluções jurídicas eficazes e estratégicas.
+              Sou advogada atuante na área jurídica desde 2023, com experiência prática em escritório e acompanhamento completo de processos, desde o atendimento inicial até a condução estratégica das demandas. 
+              Ao longo da minha trajetória, construí uma atuação sólida, marcada pelo comprometimento, responsabilidade e busca constante por resultados efetivos.
+            </p>
+
+            <p className="about-text">
+              Possuo vivência em casos de sucesso, sempre prezando por uma atuação técnica, humana e personalizada, entendendo que cada cliente traz uma história única que merece atenção e seriedade. 
+              Meu trabalho é pautado na ética, na clareza das informações e na confiança mútua, oferecendo segurança jurídica e dedicação em cada etapa do processo.
             </p>
             
             <div className="about-cta">
