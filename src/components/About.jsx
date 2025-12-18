@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import profileFull from '../assets/profile-full.jpg';
-import { MapPinned, AlarmClock, } from 'lucide-react';
+import { MapPinned, Clock, } from 'lucide-react';
 
 export default function About({ whatsappRef }) {
   const sectionRef = useRef(null);
@@ -31,8 +31,8 @@ export default function About({ whatsappRef }) {
   }, []);
 
   const achievements = [
-    { icon: <MapPinned />, value: 'Todo Brasil', label: 'Atendimento em Todo o Brasil' },
-    { icon: <AlarmClock />, value: '24h', label: 'Atendimento' },
+    { icon: <MapPinned />, value: 'Todo Brasil', label: 'Atendimento para todo o Brasil' },
+    { icon: <Clock />, value: '24h', label: 'Atendimento: Seg-Sex' },
   ];
 
   // Função para lidar com o clique no botão "Agendar Consulta"

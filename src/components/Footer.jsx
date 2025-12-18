@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Clock, CheckCircle } from 'lucide-react';
+import { Shield, Clock, MapPinned } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,8 +26,8 @@ export default function Footer() {
               <span>Atendimento: Seg-Sex</span>
             </div>
             <div className="credential-item">
-              <CheckCircle size={16} />
-              <span>Ética e Transparência</span>
+              <MapPinned size={16} />
+              <span>Atendimento para todo o Brasil</span>
             </div>
           </div>
         </div>
